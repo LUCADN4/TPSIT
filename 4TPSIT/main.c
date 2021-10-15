@@ -2,13 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 #define DIM 30
+#define LUNG 100
 
 typedef struct {
-    char num[DIM];
-    char titFilm[DIM];
-    char genere[DIM];
-    char annoUscita[DIM];
-    char dispo[DIM];
+    char num[LUNG];
+    char titFilm[LUNG];
+    char genere[LUNG];
+    char annoUscita[LUNG];
+    char dispo[LUNG];
 } Cinema;
 
 void caricaVett(Cinema v[], int n, char nomeFilm[]) {
