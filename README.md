@@ -1,2 +1,0 @@
-# TPSIT
-esercizi di tpsit
