@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1637929313 source:c:\users\luca8\desktop\compiti_vacanze\tpsit_strut\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1638437518 source:c:\users\luca8\desktop\tpsit\tpsit_strut\main.c
+	<stdio.h>
+	<stdlib.h>
+

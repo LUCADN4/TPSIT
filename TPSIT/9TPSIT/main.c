@@ -15,6 +15,7 @@ void fusione(char *s1, char *s2) {
         *(s1+n1+k) = *(s2+k);
     }
     *(s1+n1+n2)= '\0';
+
 }
 
 int main() {
