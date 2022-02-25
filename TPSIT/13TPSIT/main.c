@@ -16,17 +16,17 @@ int main() {
 
     float ** mat = (float **)malloc(rig * sizeof(float*)); /// nel float finale va * PER LE MATRICI
     for(int k = 0; k < rig; k++) {
-         mat[k] = (float *)malloc(col * sizeof(float)); //è una riga
+         mat[k] = (float *)malloc(col * sizeof(float)); //Ä una riga
     }
 
-    //inizializza 0
+    //inizializza a 0 la matrice
     for( r = 0; r < rig; r++) {
         for(c = 0; c < col; c++) {
             mat[r][c] = 0;
         }
     }
 
-    // stampa
+    // stampa della matrice
     for(r = 0; r < rig; r++) {
         for( c = 0; c < col; c++) {
             printf("%.2f  ",mat[r][c]);
