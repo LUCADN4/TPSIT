@@ -9,7 +9,7 @@ interi (massimo 100), li collochi in un vettore e inverta il vettore
 Si usi i puntatori.
 */
 
-void caricaVett(int *v, int n) {
+void caricaVett(int *v, int n) {//funzione carica vettore
     int k;
 
     for(k = 0; k < n; k++) {
@@ -19,7 +19,7 @@ void caricaVett(int *v, int n) {
 
 }
 
-void stampaVet(int *v, int n) {
+void stampaVet(int *v, int n) {//funzione stampa vettore
     int k;
 
     for(k = 0; k < n; k++) {
@@ -38,12 +38,12 @@ void inverti(int *v, int n) {
 
 }
 
-int dimVet() {
+int dimVet() {//controllo dimensione vettore
     int n;
     do {
         printf("Inserisci il numero di valori del vettore: ");
         scanf("%d", &n);
-    } while(n < 0 || n > DIM);
+    } while(n < 0 || n > DIM);//numero non minore di 0 e maggiore di 100
 
     return n;
 }
@@ -52,15 +52,15 @@ int main() {
     int n;
     n = dimVet();
 
-    int *v =(int*)malloc(n*sizeof(int));
+    int *v =(int*)malloc(n*sizeof(int)); //allocazione dinamica del vettore
 
-    caricaVett(v, n);
+    caricaVett(v, n);//caricato vettore
     printf("VETTORE NORMALE: \n");
-    stampaVet(v, n);
+    stampaVet(v, n);//stampa vettore caricato
 
-    inverti(v, n);
+    inverti(v, n);//invertito vettore
     printf("\nVETTORE INVERTITO: \n");
-    stampaVet(v, n);
+    stampaVet(v, n);//stampa vettore invertito
 
     printf("\n");
     return 0;
