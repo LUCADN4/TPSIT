@@ -6,16 +6,16 @@
 #define MIN 10
 /*
 Scrivere un programma che data una stringa in input dica se la stessa contiene almeno
-una ‘A’ tra i primi 10 caratteri.
+una â€˜Aâ€™ tra i primi 10 caratteri.
 */
 
-bool controlla(char * s){
+bool controlla(char * s){//funzione controllo se nella parola presente la lettera a 
     int k = 0, n = 0;
     bool ok = false;
 
 
-    while(k < MIN && ok == false){
-        if(*(s+k) == 'A' || *(s+k) == 'a'){
+    while(k < MIN && ok == false){ //ciclo uscita presente una a o caratteri parola terminata
+        if(*(s+k) == 'A' || *(s+k) == 'a'){//controllo presenza a nella parola
             ok = true;
         }else{
             k++;
@@ -26,12 +26,12 @@ bool controlla(char * s){
 
 int main()
 {
-   char * s = (char*)malloc(LUNG*sizeof(char));
+   char * s = (char*)malloc(LUNG*sizeof(char));//caricata stringa dinamicamente
 
-    printf("Inserisci una stringa: ");
-    scanf("%s",s);
+    printf("Inserisci una stringa: ");//stampa stringa
+    scanf("%s",s);//scrivere la parola 
 
-    if(controlla(s)){
+    if(controlla(s)){//verica se nella parola Ã¨ presente una a o A
         printf("\nLa stringa contiene il carattere 'A' o 'a'\n");
     }else{
         printf("\nLa stringa NON contiene il carattere 'A' o 'a'\n");
