@@ -11,7 +11,7 @@ typedef struct nodo {
     struct nodo * next;
 } Nodo;
 
-void stampa(Nodo * l) {
+void stampa(Nodo * l) {//stampa del nodo
     if( l != NULL) {
         stampa(l->next);
         printf("%c\n", l->c);
@@ -24,7 +24,7 @@ Nodo * listaF() {
     scanf("%d", &n);
     Nodo* head;
     if(n > 0) {
-        head=(Nodo*)malloc(sizeof(Nodo));
+        head=(Nodo*)malloc(sizeof(Nodo));//testa allocata dinamicamente
     } else {
         head=NULL;
     }
@@ -36,7 +36,7 @@ Nodo * listaF() {
         scanf("%c", &r->c);
         c=NULL;
         if(k<n-1) {
-            c= (Nodo*)malloc(sizeof(Nodo));
+            c= (Nodo*)malloc(sizeof(Nodo));//coda allocata dinamicamente
         }
         r->next=c;
         r=c;
@@ -47,6 +47,6 @@ Nodo * listaF() {
 int main() {
     Nodo * head= listaF();
     printf(" Inversa: \n");
-    stampa(head);
+    stampa(head);//stmapa
     return 0;
 }
