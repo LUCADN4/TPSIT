@@ -11,7 +11,7 @@ typedef struct nodo {
     struct nodo * next;
 } Nodo;
 
-int denqueue(Nodo ** testa) {
+int denqueue(Nodo ** testa) {//funzione togliere dato
     int num=0;
     if(*testa==NULL) {
         printf("Coda Vuota!!!\n");
@@ -23,7 +23,7 @@ int denqueue(Nodo ** testa) {
     return num;
 }
 
-void enqueue(Nodo ** t, int num) {
+void enqueue(Nodo ** t, int num) {//funzione aggiungere data
     Nodo*tail=*t;
     if(tail==NULL) {
         tail=(Nodo*)malloc(sizeof(Nodo));
@@ -41,12 +41,12 @@ void enqueue(Nodo ** t, int num) {
 
 Nodo * formattaLista() {
     int n;
-    printf("Quanti numeri vuole inserire: ");
+    printf("Quanti numeri vuole inserire: ");//inserimento degli elementi da mettere
     scanf("%d", &n);
     int num;
     Nodo * testa=NULL;
     for(int k=0; k< n; k++) {
-        printf("Dammi un numero: ");
+        printf("Dammi un numero: ");//nuemro inserito
         scanf("%d", &num);
         if(testa==NULL) {
             testa=(Nodo*)malloc(sizeof(Nodo));
@@ -63,7 +63,7 @@ Nodo * formattaLista() {
 }
 
 
-void stampaLista(Nodo*l) {
+void stampaLista(Nodo*l) {//stampa della pila
     printf("%d ",l-> num);
     if(l->next!=NULL)stampaLista(l->next);
 
