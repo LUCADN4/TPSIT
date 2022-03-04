@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 /*
-Scrivere un programma che permette all’utente di inizializzare un array unidimensionale
-di float e facendo uso dell’aritmetica dei puntatori:
+Scrivere un programma che permette allâ€™utente di inizializzare un array unidimensionale
+di float e facendo uso dellâ€™aritmetica dei puntatori:
 - individui gli elementi con valore ripetuti
 -sommi i numeri rimasti
 */
 
-int chiediDim() {
+int chiediDim() {//funzione chiede dimensione vettore
     int n;
     do {
         printf("Inserisci la dimensione del vettore: ");
@@ -24,17 +24,17 @@ int main() {
     float *v;
 
     n = chiediDim();
-    v=(float *)malloc(n*sizeof(float));
+    v=(float *)malloc(n*sizeof(float));//vettore allocato dinamicamente
 
 
-    for(int k=0; k<n; k++) {
+    for(int k=0; k<n; k++) {//catÃ¬ricato il vettore
         printf("Inserisci valore per la cella [%d]: ", k);
         scanf("%f", (v+k));
     }
 
     printf("\n");
 
-    for(int k=0; k<n; k++) {
+    for(int k=0; k<n; k++) {//stmapa del vettore
         printf("%.2f ", *(v+k));
     }
 
