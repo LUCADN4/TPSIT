@@ -3,7 +3,7 @@
 /*
 Scrivere un programma per leggere e stampare
 array bidimensionale di interi.
-Il programma richiede all’utente il numero
+Il programma richiede allâ€™utente il numero
 di righe e di colonne dopo di che richiede ad uno ad uno gli elementi da inserire
 nell'array.
 Il programma inoltre deve gestire dinamicamente l'allocazione
@@ -19,7 +19,7 @@ for(int r = 0; r < rig; r++) {
     }
 }
 
-void caricaMat(int ** mat, int rig, int col){
+void caricaMat(int ** mat, int rig, int col){//funzione carica matrice di interi
 for( int r = 0; r < rig; r++) {
         for(int c = 0; c < col; c++) {
            printf("cella [%d][%d]: ",r,c);
@@ -33,9 +33,9 @@ int main()
 {
       int rig = 0, col = 0, r = 0, c = 0;
 
-    printf("Inserisci righe: ");
+    printf("Inserisci righe: "); //inserito numero di righe
     scanf("%d",&rig);
-    printf("Inserisci colonne: ");
+    printf("Inserisci colonne: ");//inserite numero di colonne
     scanf("%d",&col);
 
     int ** mat = (int **)malloc(rig * sizeof(int*)); // matrice dinamica, create numero di righe della matrice
