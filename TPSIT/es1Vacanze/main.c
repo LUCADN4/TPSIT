@@ -6,7 +6,7 @@ Considerate una sequenza di interi letti da input e definite una funzione C che 
 stampa
 in modo tale che tutti i pari precedano i dispari, nello stesso ordine in cui vengono
 letti.
-Ad esempio, se la sequenza è:
+Ad esempio, se la sequenza Ã¨:
 1 , 20 , 35 , 40 , 62 , 51 , 66
 La stampa che si vuole ottenere e&#39;
 20 , 40 , 62 , 66 , 1 , 35 , 51
@@ -16,7 +16,7 @@ typedef struct nodo {
     struct nodo * next;
 } Nodo;
 
-void modificaLista(Nodo * l) {
+void modificaLista(Nodo * l) {//funzione per modificare la lista
     Nodo * head=l;
     while(l!=NULL) {
         if(l->num % 2 ==0)printf("%d\n", l->num);
@@ -31,11 +31,11 @@ void modificaLista(Nodo * l) {
 
 Nodo * listaF() {
     int n;
-    printf("Numeri da inserire:");
+    printf("Numeri da inserire:");//carico della lista
     scanf("%d", &n);
     Nodo* head;
     if(n> 0) {
-        head=(Nodo*)malloc(sizeof(Nodo));
+        head=(Nodo*)malloc(sizeof(Nodo));//allocata dinamicamente la testa
     } else {
         head=NULL;
     }
@@ -46,7 +46,7 @@ Nodo * listaF() {
         scanf("%d", &r->num);
         c=NULL;
         if(k < n-1) {
-            c= (Nodo*)malloc(sizeof(Nodo));
+            c= (Nodo*)malloc(sizeof(Nodo));//allocata dinamicamente la coda
         }
         r->next=c;
         r=c;
@@ -54,7 +54,7 @@ Nodo * listaF() {
     return head;
 }
 
-void stampaLista(Nodo * l) {
+void stampaLista(Nodo * l) {//funzione per stampare la lista
     if(l!=NULL) {
         printf("%d\n", l->num);
         stampaLista(l->next);
@@ -66,8 +66,8 @@ void stampaLista(Nodo * l) {
 int main() {
     Nodo * head= listaF();
     printf("Stampa Lista: \n");
-    stampaLista(head);
+    stampaLista(head);//lista stampa 
     printf("Stampa Lista modificata: \n");
-    modificaLista(head);
+    modificaLista(head);//stampa lista modificata
     return 0;
 }
